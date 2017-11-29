@@ -1,0 +1,10 @@
+
+
+create table customer (id integer auto_increment primary key,name varchar(30) not null ,email_id varchar(30) not null,mobile_number integer,key (name));
+
+
+create table transactions (id integer primary key auto_increment,name varchar(30) not null,day_of_transaction date,foreign key (name) references customer(name));
+
+insert into transactions(name,day_of_transaction)values('anand','2010-04-10');
+
+insert into customer(name,email_id,mobile_number)values('anand','dranandrao@yahoo.com',7259485997);
